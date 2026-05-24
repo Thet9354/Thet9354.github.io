@@ -303,11 +303,79 @@
       border-color: rgba(251, 191, 36, 0.35);
     }
 
+    /* --- carousel --- */
+    .hk-track {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .hk-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hk-slide {
+      flex: 0 0 100%;
+      height: 100%;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+    }
+
+    .hk-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      background: #0a0a0c;
+    }
+
+    .hk-dots {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2;
+      display: flex;
+      gap: 7px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(8, 8, 10, 0.45);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .hk-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(248, 250, 252, 0.4);
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .hk-dot:hover {
+      background: rgba(248, 250, 252, 0.7);
+    }
+
+    .hk-dot.active {
+      background: #f8fafc;
+      transform: scale(1.15);
+    }
+
     .hk-photo-label {
       position: absolute;
       left: 28px;
       bottom: 22px;
-      z-index: 1;
+      z-index: 2;
       font-family: 'Gloock', serif;
       font-size: 1.5rem;
       color: #f8fafc;
@@ -495,10 +563,18 @@
         <div class="hk-featured">
 
           <div class="hk-card">
-            <div class="hk-photo lioncity">
-              <img src="assets/hackathons/lioncityhack2.jpg" loading="lazy" onerror="this.style.display='none'"
-                alt="Holding the Most Entertaining Project winner board at Lion City Hacks" />
+            <div class="hk-photo lioncity hk-carousel" data-interval="5000">
+              <div class="hk-track">
+                <div class="hk-slide"><img src="assets/hackathons/lioncityhack2.jpg" loading="lazy" alt="Lion City Hacks venue with the Most Entertaining Project winner board" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/lioncityhack.jpg" loading="lazy" alt="Holding the Most Entertaining Project winner board at Lion City Hacks" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/lioncityhack4.jpg" loading="lazy" alt="Lion City Hacks at Red Hat Singapore" /></div>
+              </div>
               <div class="hk-photo-label">Lion City Hacks</div>
+              <div class="hk-dots">
+                <button class="hk-dot active" aria-label="Slide 1"></button>
+                <button class="hk-dot" aria-label="Slide 2"></button>
+                <button class="hk-dot" aria-label="Slide 3"></button>
+              </div>
             </div>
             <div class="hk-card-body">
               <div class="hk-event">Lion City Hacks — Most Entertaining Project 🏆</div>
@@ -523,10 +599,18 @@
           </div>
 
           <div class="hk-card">
-            <div class="hk-photo create4good">
-              <img src="assets/hackathons/create4good.jpg" loading="lazy" onerror="this.style.display='none'"
-                alt="Create4Good final presentation showing HearAll user validation" />
+            <div class="hk-photo create4good hk-carousel" data-interval="5500">
+              <div class="hk-track">
+                <div class="hk-slide"><img src="assets/hackathons/create4good.jpg" loading="lazy" alt="Create4Good final presentation showing HearAll user validation" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/sutd-essec.jpg" loading="lazy" alt="SUTD x ESSEC Create4Good Hackathon moment" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/sutd-essec2.jpg" loading="lazy" alt="SUTD x ESSEC Create4Good Hackathon moment" /></div>
+              </div>
               <div class="hk-photo-label">Create4Good</div>
+              <div class="hk-dots">
+                <button class="hk-dot active" aria-label="Slide 1"></button>
+                <button class="hk-dot" aria-label="Slide 2"></button>
+                <button class="hk-dot" aria-label="Slide 3"></button>
+              </div>
             </div>
             <div class="hk-card-body">
               <div class="hk-event">SUTD x ESSEC Create4Good Hackathon</div>
@@ -580,10 +664,18 @@
           </div>
 
           <div class="hk-card">
-            <div class="hk-photo t4g">
-              <img src="assets/hackathons/t4g.jpg" loading="lazy" onerror="this.style.display='none'"
-                alt="Presenting HearAll on stage at Tech for Good 2022" />
+            <div class="hk-photo t4g hk-carousel" data-interval="6000">
+              <div class="hk-track">
+                <div class="hk-slide"><img src="assets/hackathons/t4g.jpg" loading="lazy" alt="Presenting HearAll on stage at Tech for Good 2022" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/t4g-2.jpg" loading="lazy" alt="Tech for Good 2022 — HearAll booth" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/t4g-3.jpg" loading="lazy" alt="Tech for Good 2022 — HearAll showcase" /></div>
+              </div>
               <div class="hk-photo-label">Tech for Good 2022</div>
+              <div class="hk-dots">
+                <button class="hk-dot active" aria-label="Slide 1"></button>
+                <button class="hk-dot" aria-label="Slide 2"></button>
+                <button class="hk-dot" aria-label="Slide 3"></button>
+              </div>
             </div>
             <div class="hk-card-body">
               <div class="hk-event">Tech for Good (T4G) 2022</div>
@@ -611,10 +703,18 @@
           </div>
 
           <div class="hk-card">
-            <div class="hk-photo aecom">
-              <img src="assets/hackathons/aecom2.jpg" loading="lazy" onerror="this.style.display='none'"
-                alt="Working with mentors at AECOM FASTTRACK CityHack Singapore 2022" />
+            <div class="hk-photo aecom hk-carousel" data-interval="5500">
+              <div class="hk-track">
+                <div class="hk-slide"><img src="assets/hackathons/aecom2.jpg" loading="lazy" alt="Working with mentors at AECOM FASTTRACK CityHack Singapore 2022" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/aecom-2.jpg" loading="lazy" alt="AECOM FASTTRACK CityHack Singapore 2022 — team session" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/aecom-3.jpg" loading="lazy" alt="AECOM FASTTRACK CityHack Singapore 2022 — build session" /></div>
+              </div>
               <div class="hk-photo-label">AECOM CityHack</div>
+              <div class="hk-dots">
+                <button class="hk-dot active" aria-label="Slide 1"></button>
+                <button class="hk-dot" aria-label="Slide 2"></button>
+                <button class="hk-dot" aria-label="Slide 3"></button>
+              </div>
             </div>
             <div class="hk-card-body">
               <div class="hk-event">AECOM FASTTRACK CityHack Singapore 2022</div>
@@ -637,10 +737,18 @@
           </div>
 
           <div class="hk-card">
-            <div class="hk-photo iti">
-              <img src="assets/hackathons/iti2023.jpg" loading="lazy" onerror="this.style.display='none'"
-                alt="Pitching at ITI 2023, NTUWSC's ideation hackathon on workplace inclusion" />
+            <div class="hk-photo iti hk-carousel" data-interval="5500">
+              <div class="hk-track">
+                <div class="hk-slide"><img src="assets/hackathons/iti2023.jpg" loading="lazy" alt="Pitching at ITI 2023, NTUWSC's ideation hackathon on workplace inclusion" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/iti-2.jpg" loading="lazy" alt="ITI 2023 — NTUWSC workplace inclusion ideation hackathon" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/iti-3.jpg" loading="lazy" alt="ITI 2023 — NTUWSC workplace inclusion ideation hackathon" /></div>
+              </div>
               <div class="hk-photo-label">ITI 2023</div>
+              <div class="hk-dots">
+                <button class="hk-dot active" aria-label="Slide 1"></button>
+                <button class="hk-dot" aria-label="Slide 2"></button>
+                <button class="hk-dot" aria-label="Slide 3"></button>
+              </div>
             </div>
             <div class="hk-card-body">
               <div class="hk-event">ITI 2023 — Integrating Persons with Disabilities into the Workplace</div>
@@ -665,10 +773,18 @@
           </div>
 
           <div class="hk-card">
-            <div class="hk-photo mxhack">
-              <img src="assets/hackathons/mxhack.jpg" loading="lazy" onerror="this.style.display='none'"
-                alt="Team at MXHacks 2022 by Mendix and Siemens" />
+            <div class="hk-photo mxhack hk-carousel" data-interval="6000">
+              <div class="hk-track">
+                <div class="hk-slide"><img src="assets/hackathons/mxhack.jpg" loading="lazy" alt="Team at MXHacks 2022 by Mendix and Siemens" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/mxhack-2.jpg" loading="lazy" alt="MXHacks 2022 — Mendix × Siemens build sprint" /></div>
+                <div class="hk-slide"><img src="assets/hackathons/mxhack-3.jpg" loading="lazy" alt="MXHacks 2022 — Mendix × Siemens build sprint" /></div>
+              </div>
               <div class="hk-photo-label">MXHacks 2022</div>
+              <div class="hk-dots">
+                <button class="hk-dot active" aria-label="Slide 1"></button>
+                <button class="hk-dot" aria-label="Slide 2"></button>
+                <button class="hk-dot" aria-label="Slide 3"></button>
+              </div>
             </div>
             <div class="hk-card-body">
               <div class="hk-event">MXHacks 2022</div>
@@ -782,6 +898,63 @@
   <script src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/js/webflow.e61c0c5d.4012d7da89075589.js"
     type="text/javascript"></script>
 
+  <script>
+    // --- Hackathon photo carousels ---
+    document.querySelectorAll('.hk-carousel').forEach(function (car) {
+      var track = car.querySelector('.hk-track');
+      var slides = Array.prototype.slice.call(car.querySelectorAll('.hk-slide'));
+      var dots = Array.prototype.slice.call(car.querySelectorAll('.hk-dot'));
+      if (slides.length < 2) return;
+      var interval = parseInt(car.getAttribute('data-interval'), 10) || 5000;
+      var idx = 0;
+      var timer = null;
+      var userPaused = false;
+
+      function goTo(i, smooth) {
+        idx = (i + slides.length) % slides.length;
+        track.scrollTo({ left: slides[idx].offsetLeft, behavior: smooth === false ? 'auto' : 'smooth' });
+        dots.forEach(function (d, j) { d.classList.toggle('active', j === idx); });
+      }
+
+      function start() {
+        stop();
+        if (userPaused) return;
+        timer = setInterval(function () { goTo(idx + 1); }, interval);
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+      // Sync dots from scroll position (handles drag/swipe)
+      var scrollTick = null;
+      track.addEventListener('scroll', function () {
+        if (scrollTick) cancelAnimationFrame(scrollTick);
+        scrollTick = requestAnimationFrame(function () {
+          var nearest = Math.round(track.scrollLeft / track.clientWidth);
+          if (nearest !== idx && slides[nearest]) {
+            idx = nearest;
+            dots.forEach(function (d, j) { d.classList.toggle('active', j === idx); });
+          }
+        });
+      }, { passive: true });
+
+      dots.forEach(function (d, i) {
+        d.addEventListener('click', function () { userPaused = false; goTo(i); start(); });
+      });
+
+      car.addEventListener('mouseenter', stop);
+      car.addEventListener('mouseleave', start);
+      car.addEventListener('touchstart', function () { userPaused = true; stop(); }, { passive: true });
+
+      // Pause when offscreen
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) start(); else stop(); });
+        }, { threshold: 0.25 });
+        io.observe(car);
+      } else {
+        start();
+      }
+    });
+  </script>
   <script>
     $('.nav-toggle').click(function (e) {
       e.preventDefault();
