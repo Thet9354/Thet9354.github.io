@@ -5,14 +5,14 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Phoon Thet Pine — Web & App Developer</title>
-  <meta content="Portfolio of Phoon Thet Pine, a web &amp; Python developer building AI apps and practical tools."
+  <title>Phoon Thet Pine — Founder & Builder</title>
+  <meta content="Phoon Thet Pine — Founder of Dibs and LeadLooms. Building AI products that work in the real world. MOE Certified Instructor. Based in Singapore."
     name="description" />
-  <meta content="Phoon Thet Pine — Web & App Developer" property="og:title" />
-  <meta content="Portfolio of Phoon Thet Pine, a web &amp; Python developer building AI apps and practical tools."
+  <meta content="Phoon Thet Pine — Founder & Builder" property="og:title" />
+  <meta content="Phoon Thet Pine — Founder of Dibs and LeadLooms. Building AI products that work in the real world. MOE Certified Instructor. Based in Singapore."
     property="og:description" />
-  <meta content="Phoon Thet Pine — Web & App Developer" property="twitter:title" />
-  <meta content="Portfolio of Phoon Thet Pine, a web &amp; Python developer building AI apps and practical tools."
+  <meta content="Phoon Thet Pine — Founder & Builder" property="twitter:title" />
+  <meta content="Phoon Thet Pine — Founder of Dibs and LeadLooms. Building AI products that work in the real world. MOE Certified Instructor. Based in Singapore."
     property="twitter:description" />
   <meta property="og:type" content="website" />
   <meta content="summary_large_image" name="twitter:card" />
@@ -516,14 +516,116 @@
       display: block;
     }
   </style>
+  <style>
+    /* 3-item nav: drop the 2-position sliding indicator, highlight the active toggle */
+    .nav-pill-wrapper {
+      width: auto !important;
+    }
+
+    .nav-pill {
+      width: auto !important;
+      gap: 4px;
+    }
+
+    .nav-indicator-pill,
+    .nav-indicator-glow {
+      display: none !important;
+    }
+
+    .nav-toggle {
+      width: auto !important;
+      padding: 0 18px;
+      border-radius: 999px;
+      transition: background 0.2s ease;
+    }
+
+    .nav-toggle:not(.w--current):hover {
+      background: rgba(242, 242, 242, 0.06);
+    }
+
+    .nav-toggle.w--current {
+      background: rgba(242, 242, 242, 0.12);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(242, 242, 242, 0.08);
+    }
+
+    .project-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1;
+      color: #cbd5e1;
+      background: rgba(148, 163, 184, 0.10);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .badge-live {
+      color: #4ade80;
+      background: rgba(74, 222, 128, 0.10);
+      border-color: rgba(74, 222, 128, 0.30);
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ade80;
+      animation: livePulse 2s infinite;
+    }
+
+    @keyframes livePulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+      }
+
+      70% {
+        box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+      }
+    }
+
+    .text-hero .text-hero-serif {
+      background-image: linear-gradient(180deg, #f2f2f2 0%, #f2f2f2 70%, rgba(242, 242, 242, 0.55) 100%);
+    }
+
+    .hero-social-proof {
+      margin-top: 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: #94a3b8;
+    }
+
+    .littlewins-thumbnail {
+      margin-top: auto;
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      background: transparent;
+      padding: 24px 16px 8px;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
 
 <body class="body">
-  <div data-w-id="a91daa17-edea-3045-e068-85775e828427" class="loading-overlay"><img
-      src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/645df90657e6ec4e4ed2e236_loading-dots.gif"
-      loading="lazy" alt="AI Master Chatbot" class="logo-loading" />
-    <div class="text-loading">Just a moment.</div>
-  </div>
   <div data-w-id="fd80abe2-b514-5dbb-dd2b-42c8f07c8360" class="swipe-indicator-wrapper">
     <div class="text-swipe-to-see-work">SWIPE TO</div><img
       src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64097027d8cc0cb902ffc6bd_icon-swipe-up.svg"
@@ -538,14 +640,16 @@
             loading="lazy" alt="" class="logomark" />
           <div class="logo-text">
             <div class="text-logo">Phoon Thet Pine</div>
-            <div class="text-underlogo">Web & App Developer</div>
+            <div class="text-underlogo">Founder & Builder</div>
           </div>
         </div>
       </div>
       <div class="nav-pill-wrapper">
         <div class="nav-indicator-glow"></div>
-        <div class="nav-pill"><a href="#" class="nav-toggle work w-inline-block">
+        <div class="nav-pill"><a href="#" aria-current="page" class="nav-toggle work w-inline-block w--current">
             <div class="text-nav-toggle">Work</div>
+          </a><a href="hackathons.html" class="nav-toggle w-inline-block">
+            <div class="text-nav-toggle">Hackathons</div>
           </a><a data-w-id="b60fd352-a0aa-70fb-ab78-6a5d05bbacd8" href="info.html" class="nav-toggle w-inline-block">
             <div class="text-nav-toggle">Info</div>
           </a>
@@ -585,9 +689,11 @@
     <div class="menu-cards-wrapper">
       <div class="menu-card">
         <div class="text-menu-overline">MAIN</div>
-        <div class="menu-items-wrapper"><a href="#" class="menu-item w-inline-block">
+        <div class="menu-items-wrapper"><a href="index.html" class="menu-item w-inline-block">
             <div class="text-mobile-menu">Work</div>
-          </a><a href="#" class="menu-item w-inline-block">
+          </a><a href="hackathons.html" class="menu-item w-inline-block">
+            <div class="text-mobile-menu">Hackathons</div>
+          </a><a href="info.html" class="menu-item w-inline-block">
             <div class="text-mobile-menu">Info</div>
           </a></div>
       </div>
@@ -633,14 +739,16 @@
             </div>
             <div class="window-content">
               <div class="hero-text-content">
-                <div class="text-hero">I build Web &amp; App tools that <span class="text-hero-serif">solve
-                    problems.</span></div>
+                <div class="text-hero">I build AI products that <span class="text-hero-serif">work in the real
+                    world.</span></div>
                 <div class="hero-about-grid">
                   <div class="hero-about-null"></div>
                   <div id="w-node-ebb1e125-4f59-8cf6-0b73-376972364a52-e330f4c5">
-                    <div id="w-node-_785630cc-b7d0-294c-4a1a-e673b5a8db79-e330f4c5" class="text-hero-about">Web &amp;
-                      App developer<br /><span class="text-hero-about-formerly">Building Practical commercial and AI
-                        apps</span></div>
+                    <div id="w-node-_785630cc-b7d0-294c-4a1a-e673b5a8db79-e330f4c5" class="text-hero-about">Founder of
+                      Dibs and LeadLooms<br /><span class="text-hero-about-formerly">MOE Certified Instructor.
+                        Self-taught across Android, iOS, Web, and AI.</span></div>
+                    <div class="hero-social-proof">Backed by Agile &amp; Sandbox · Stripe for Startups · MOE Certified
+                      Instructor</div>
                   </div>
                 </div>
               </div>
@@ -657,14 +765,16 @@
         <div data-w-id="c0b7da05-9e29-47c9-f176-90a460b08cbc" class="hero-portrait-top">
           <div class="overline-wrapper">
             <div class="icon-section-dot"></div>
-            <div class="text-portrait-overline">Phoon Thet Pine — Web & App Developer</div>
+            <div class="text-portrait-overline">Phoon Thet Pine — Founder & Builder</div>
           </div>
-          <div class="text-hero portrait">I build Web &amp; App tools that <span class="text-hero-serif">solve
-              problems.</span></div>
+          <div class="text-hero portrait">I build AI products that <span class="text-hero-serif">work in the real
+              world.</span></div>
         </div>
         <div data-w-id="4f6a279d-1b18-5bf3-32ea-1e08b6e39e5e" class="hero-portrait-bottom">
-          <div class="text-portrait-secondary"><span class="text-open-to-new-opportunities">Web &amp; App
-              developer<br />‍</span>Building Practical commercial and AI apps</div>
+          <div class="text-portrait-secondary"><span class="text-open-to-new-opportunities">Founder of Dibs and
+              LeadLooms<br />‍</span>MOE Certified Instructor · Self-taught across Android, iOS, Web, and AI</div>
+          <div class="hero-social-proof">Backed by Agile &amp; Sandbox · Stripe for Startups · MOE Certified Instructor
+          </div>
         </div>
       </div>
       <div data-w-id="bdb6c1db-35db-c342-e8af-29cb87d2c4d4" class="divider-scroll-wrapper">
@@ -690,7 +800,16 @@
                   src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
                   loading="lazy" alt="" class="icon-projectcard-arrow" />
               </div>
-              <div class="text-projectcard-description"><span class="text-projectcard-description-company">SaaS, &#x27;26</span> — Omnichannel CRM that turns conversations into bookings and recovers lost revenue on autopilot.</div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">SaaS,
+                  &#x27;25–Present</span> — AI-powered omnichannel CRM for service businesses. Unifies WhatsApp,
+                Telegram, and Instagram into one inbox — with an AI that handles bookings, follow-ups, and customer
+                recovery autonomously.</div>
+              <div class="project-badges">
+                <div class="badge badge-live"><span class="live-dot"></span>LIVE</div>
+                <div class="badge">Agile &amp; Sandbox</div>
+                <div class="badge">Stripe for Startups</div>
+                <div class="badge">Users in SG &amp; Indonesia</div>
+              </div>
             </div><img src="assets/Dibs.png" loading="lazy" sizes="100vw" alt="Dibs"
               class="project-thumbnail futureai-thumbnail" />
             <div class="project-card-colour thn"></div>
@@ -707,11 +826,41 @@
                   src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
                   loading="lazy" alt="" class="icon-projectcard-arrow" />
               </div>
-              <div class="text-projectcard-description"><span class="text-projectcard-description-company">Saas
-                  Business, &#x27;26</span> — Automate lead parsing from Gmail to Notion with AI.</div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">SaaS,
+                  &#x27;25–Present</span> — Automates lead parsing from Gmail into Notion using AI. Solo-built and live
+                with active users.</div>
+              <div class="project-badges">
+                <div class="badge badge-live"><span class="live-dot"></span>LIVE</div>
+                <div class="badge">Solo-built</div>
+                <div class="badge">Active users</div>
+              </div>
             </div><img src="assets/LeadLooms.png" loading="lazy" sizes="100vw" alt="LeadLooms"
               class="project-thumbnail futureai-thumbnail" />
             <div class="project-card-colour thn"></div>
+          </a>
+        </div>
+        <div class="project-card-outline">
+          <div class="glare-item-top outer-edge"></div><a href="https://littlewins.sg" target="_blank"
+            rel="noopener noreferrer" class="project-card w-inline-block">
+            <div class="glare-item-top inner-edge"></div>
+            <div class="projectcard-top">
+              <div class="projectcard-title-row">
+                <div class="text-projectcard-title">Little Wins</div><img
+                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
+                  loading="lazy" alt="" class="icon-projectcard-arrow" />
+              </div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
+                  &#x27;24–Present</span> — iOS mental wellness app built on the belief that small daily wins compound
+                into lasting change. Co-founded and led iOS development in Swift and SwiftUI.</div>
+              <div class="project-badges">
+                <div class="badge badge-live"><span class="live-dot"></span>LIVE</div>
+                <div class="badge">iOS</div>
+                <div class="badge">Co-founded</div>
+              </div>
+            </div>
+            <img src="assets/LittleWins.png" loading="lazy" sizes="100vw" alt="Little Wins"
+              class="project-thumbnail littlewins-thumbnail" />
+            <div class="project-card-colour spotlight"></div>
           </a>
         </div>
         <div class="project-card-outline">
@@ -726,27 +875,16 @@
                   loading="lazy" alt="" class="icon-projectcard-arrow" />
               </div>
               <div class="text-projectcard-description"><span class="text-projectcard-description-company">Android App,
-                  &#x27;23</span> — Breaking down communication barriers, one conversation at a time.</div>
+                  &#x27;23</span> — Accessibility app breaking communication barriers for hearing-impaired users using AI
+                sign language recognition. Presented at Create4Good hackathon at SUTD.</div>
+              <div class="project-badges">
+                <div class="badge">Hackathon</div>
+                <div class="badge">Accessibility</div>
+                <div class="badge">Android</div>
+              </div>
             </div><img src="assets/HearAll.png?v=2" loading="lazy" sizes="100vw" alt="HearAll"
               class="project-thumbnail hearall-thumbnail" />
             <div class="project-card-colour stadiabt"></div>
-          </a>
-        </div>
-        <div class="project-card-outline">
-          <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d98" class="glare-item-top outer-edge"></div><a
-            data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d99" href="https://github.com/Thet9354/IOS-Run-Club"
-            target="_blank" rel="noopener noreferrer" class="project-card w-inline-block">
-            <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d9a" class="glare-item-top inner-edge"></div>
-            <div class="projectcard-top">
-              <div class="projectcard-title-row">
-                <div class="text-projectcard-title">RunClub</div><img
-                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
-                  loading="lazy" alt="" class="icon-projectcard-arrow" />
-              </div>
-              <div class="text-projectcard-description"><span class="text-projectcard-description-company">SwiftUI iOS,
-                  &#x27;25</span> — Smart Run Tracking with HealthKit Sync</div>
-            </div><img src="assets/RunClub.png" loading="lazy" alt="" class="project-thumbnail runclub-thumbnail" />
-            <div class="project-card-colour spotlight"></div>
           </a>
         </div>
         <div class="project-card-outline">
@@ -760,11 +898,60 @@
                   src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
                   loading="lazy" alt="" class="icon-projectcard-arrow" />
               </div>
-              <div class="text-projectcard-description"><span class="text-projectcard-description-company">Python,
-                  &#x27;26</span> — Predicts customer churn to highlight retention risks early.</div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">Python / ML,
+                  &#x27;26</span> — Deep learning model that predicts customer churn and surfaces retention risks early.
+                Built in Python with a custom neural network architecture.</div>
+              <div class="project-badges">
+                <div class="badge">Machine Learning</div>
+                <div class="badge">Python</div>
+                <div class="badge">Deep Learning</div>
+              </div>
             </div><img src="assets/neuralchurn.png" loading="lazy" alt="Neural Network Churn Rate Predictor"
               class="project-thumbnail naft-thumbnail" />
             <div class="project-card-colour thn"></div>
+          </a>
+        </div>
+        <div class="project-card-outline">
+          <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d98" class="glare-item-top outer-edge"></div><a
+            data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d99" href="https://github.com/Thet9354/IOS-Run-Club"
+            target="_blank" rel="noopener noreferrer" class="project-card w-inline-block">
+            <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d9a" class="glare-item-top inner-edge"></div>
+            <div class="projectcard-top">
+              <div class="projectcard-title-row">
+                <div class="text-projectcard-title">RunClub</div><img
+                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
+                  loading="lazy" alt="" class="icon-projectcard-arrow" />
+              </div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
+                  &#x27;25</span> — Smart run tracking app with HealthKit sync built in SwiftUI.</div>
+              <div class="project-badges">
+                <div class="badge">SwiftUI</div>
+                <div class="badge">iOS</div>
+                <div class="badge">HealthKit</div>
+              </div>
+            </div><img src="assets/RunClub.png" loading="lazy" alt="RunClub" class="project-thumbnail runclub-thumbnail" />
+            <div class="project-card-colour spotlight"></div>
+          </a>
+        </div>
+        <div class="project-card-outline">
+          <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da7" class="glare-item-top outer-edge"></div><a
+            data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da8" href="https://github.com/Thet9354/AthletlQ" target="_blank"
+            rel="noopener noreferrer" class="project-card w-inline-block">
+            <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da9" class="glare-item-top inner-edge"></div>
+            <div class="projectcard-top">
+              <div class="projectcard-title-row">
+                <div class="text-projectcard-title">AthletIQ</div><img
+                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
+                  loading="lazy" alt="" class="icon-projectcard-arrow" />
+              </div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
+                  &#x27;25</span> — All-in-one Swift-powered fitness companion.</div>
+              <div class="project-badges">
+                <div class="badge">SwiftUI</div>
+                <div class="badge">iOS</div>
+              </div>
+            </div><img src="assets/AthletlQ.png" loading="lazy" alt="AthletIQ" class="project-thumbnail athletiq-thumbnail" />
+            <div class="project-card-colour spotlight"></div>
           </a>
         </div>
         <div class="project-card-outline">
@@ -779,26 +966,13 @@
                   loading="lazy" alt="" class="icon-projectcard-arrow" />
               </div>
               <div class="text-projectcard-description"><span class="text-projectcard-description-company">Android
-                  App</span> — Smarter Money Habits for Singaporean Youth</div>
-            </div><img src="assets/LearnLoop.png" loading="lazy" alt="" class="project-thumbnail learnloop-thumbnail" />
-            <div class="project-card-colour rbc"></div>
-          </a>
-        </div>
-        <div class="project-card-outline">
-          <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da7" class="glare-item-top outer-edge"></div><a
-            data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da8" href="https://github.com/Thet9354/AthletlQ" target="_blank"
-            rel="noopener noreferrer" class="project-card w-inline-block">
-            <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da9" class="glare-item-top inner-edge"></div>
-            <div class="projectcard-top">
-              <div class="projectcard-title-row">
-                <div class="text-projectcard-title">AthletIQ</div><img
-                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
-                  loading="lazy" alt="" class="icon-projectcard-arrow" />
+                  App</span> — Fintech app building smarter money habits for Singaporean youth.</div>
+              <div class="project-badges">
+                <div class="badge">Android</div>
+                <div class="badge">Fintech</div>
               </div>
-              <div class="text-projectcard-description"><span class="text-projectcard-description-company">SwiftUI iOS,
-                  &#x27;25</span> — Your all-in-one Swift-powered fitness companion</div>
-            </div><img src="assets/AthletlQ.png" loading="lazy" alt="" class="project-thumbnail athletiq-thumbnail" />
-            <div class="project-card-colour spotlight"></div>
+            </div><img src="assets/LearnLoop.png" loading="lazy" alt="LearnLoop" class="project-thumbnail learnloop-thumbnail" />
+            <div class="project-card-colour rbc"></div>
           </a>
         </div>
       </div>
@@ -814,6 +988,8 @@
               <div class="footer-links-wrapper"><a href="index.html" aria-current="page"
                   class="footer-link w-inline-block w--current">
                   <div class="text-footer-link">Work</div>
+                </a><a href="hackathons.html" class="footer-link w-inline-block">
+                  <div class="text-footer-link">Hackathons</div>
                 </a><a href="info.html" class="footer-link w-inline-block">
                   <div class="text-footer-link">Info</div>
                 </a></div>
