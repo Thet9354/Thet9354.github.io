@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html data-wf-domain="perryw-2023.webflow.io" data-wf-page="6402a76850984809244a5491" data-wf-site="63dcb6e1a80e9454b630f4c4" data-wf-status="1">
+<head>
+  <meta charset="utf-8"/>
+  <title>LearnLoop — Android Youth Fintech | Phoon Thet Pine</title>
+  <meta content="Phoon Thet Pine co-built LearnLoop: an Android gamified fintech application teaching financial literacy to Singaporean youth." name="description"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/css/perryw-2023.webflow.1d9c39031.css" rel="stylesheet" type="text/css"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.gstatic.com" rel="preconnect"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Inter:100,200,300,regular,500,600,700,800,900","Albert Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic","Roboto Mono:100,200,300,regular,500,600,700","JetBrains Mono:100,200,300,regular,500,600,700,800","Gloock:regular"]
+      }
+    });
+  </script>
+  <style>
+    body {
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+      background-color: #08080a;
+    }
+    body::-webkit-scrollbar {
+      display: none;
+    }
+    .w-webflow-badge { display: none !important; }
+    
+    /* Custom CSS details */
+    .project-detail-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 64px;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+    @media (max-width: 991px) {
+      .project-detail-layout {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 40px 20px 80px;
+      }
+    }
+    .project-sidebar {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+    .sidebar-section {
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+    }
+    .sidebar-section:last-child {
+      border-bottom: none;
+    }
+    .sidebar-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+    .sidebar-value {
+      font-size: 0.9375rem;
+      color: #cbd5e1;
+      line-height: 1.45;
+    }
+    .sidebar-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #22c55e;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .sidebar-link:hover {
+      color: #4ade80;
+      transform: translateX(2px);
+    }
+    .sidebar-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .sidebar-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6875rem;
+      color: #94a3b8;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(148, 163, 184, 0.04);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+    }
+    .content-writeup {
+      max-width: 720px;
+    }
+    .content-writeup h2 {
+      font-family: 'Gloock', serif;
+      font-size: 2.25rem;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      line-height: 1.25;
+      color: #f8fafc;
+      margin-top: 48px;
+      margin-bottom: 20px;
+    }
+    .content-writeup h2:first-child {
+      margin-top: 0;
+    }
+    .content-writeup h3 {
+      font-family: 'Albert Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #e2e8f0;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+    .content-writeup p {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+    .content-writeup ul {
+      margin-bottom: 24px;
+      padding-left: 20px;
+      color: #94a3b8;
+    }
+    .content-writeup li {
+      font-size: 1.0625rem;
+      line-height: 1.68;
+      margin-bottom: 10px;
+    }
+    .content-writeup strong {
+      color: #f1f5f9;
+      font-weight: 600;
+    }
+    .highlight-box {
+      background: rgba(34, 197, 94, 0.03);
+      border: 1px solid rgba(34, 197, 94, 0.12);
+      border-left: 3px solid #22c55e;
+      padding: 24px;
+      border-radius: 12px;
+      margin: 36px 0;
+    }
+    .highlight-box p {
+      color: #cbd5e1;
+      margin-bottom: 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .architecture-box {
+      background: rgba(148, 163, 184, 0.02);
+      border: 1px solid rgba(148, 163, 184, 0.08);
+      padding: 24px;
+      border-radius: 12px;
+      margin: 32px 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+      overflow-x: auto;
+    }
+    .back-button-container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 92px 24px 8px;
+    }
+    @media (max-width: 767px) {
+      .back-button-container {
+        padding: 76px 20px 6px;
+      }
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8125rem;
+      color: #94a3b8;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 99px;
+      background: rgba(148, 163, 184, 0.04);
+      border: 1px solid rgba(148, 163, 184, 0.1);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    .back-btn:hover {
+      color: #f8fafc;
+      background: rgba(148, 163, 184, 0.08);
+      border-color: rgba(148, 163, 184, 0.2);
+      transform: translateX(-4px);
+    }
+    
+    .nav-toggle, .logo-block, .chip-socials, .nav-menu-button {
+      pointer-events: auto;
+    }
+    .section-nav {
+      pointer-events: none;
+    }
+
+    /* Floating back-to-projects button (reveals on scroll-up) */
+    .floating-back-btn {
+      position: fixed;
+      top: 78px;
+      left: 24px;
+      z-index: 60;
+      opacity: 0;
+      transform: translateY(-12px);
+      pointer-events: none;
+      background: rgba(13, 13, 15, 0.72);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      transition: opacity 0.45s cubic-bezier(0.16,1,0.3,1), transform 0.45s cubic-bezier(0.16,1,0.3,1), color 0.3s, border-color 0.3s, background 0.3s;
+    }
+    .floating-back-btn.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    @media (max-width: 767px) {
+      .floating-back-btn { top: 68px; left: 16px; }
+    }
+
+    /* Subtle entrance + scroll-reveal animations */
+    @keyframes ptpFadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .anim-up { opacity: 0; }
+    body.loaded .anim-up { animation: ptpFadeUp 0.75s cubic-bezier(0.16,1,0.3,1) both; }
+    body.loaded .anim-up.d1 { animation-delay: 0.05s; }
+    body.loaded .anim-up.d2 { animation-delay: 0.14s; }
+    body.loaded .anim-up.d3 { animation-delay: 0.24s; }
+    body.loaded .anim-up.d4 { animation-delay: 0.36s; }
+
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+    .sidebar-chip { transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), color 0.25s, border-color 0.25s, background 0.25s; }
+    .sidebar-chip:hover { transform: translateY(-2px); color: #e2e8f0; border-color: rgba(148,163,184,0.25); background: rgba(148,163,184,0.08); }
+
+    .window-main img { transition: transform 0.6s cubic-bezier(0.16,1,0.3,1); }
+    .container-hero-image:hover .window-main img { transform: scale(1.015); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim-up, body.loaded .anim-up { opacity: 1 !important; animation: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .floating-back-btn { transition: opacity 0.2s linear; }
+    }
+  </style>
+</head>
+<body class="body">
+  <!-- Nav Bar -->
+  <div style="opacity:1" class="section-nav">
+    <div class="nav-bar">
+      <div class="nav-left-wrapper">
+        <a href="index.html" class="logo-block w-inline-block" style="text-decoration: none;">
+          <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64196e9f623177d26bd812da_wch-logomark-vert-fill.svg" loading="lazy" alt="" class="logomark"/>
+          <div class="logo-text">
+            <div class="text-logo">Phoon Thet Pine</div>
+            <div class="text-underlogo">Founder & Builder</div>
+          </div>
+        </a>
+      </div>
+      <div class="nav-pill-wrapper" style="display: none;">
+      </div>
+      <div class="nav-right-wrapper">
+        <div class="chip-socials-wrapper">
+          <a href="https://github.com/Thet9354" target="_blank" class="chip-socials w-inline-block">
+            <div class="text-socialnav">GitHub</div>
+            <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/63e0b50ea0956f4526968ef1_23-icon-external.svg" loading="lazy" alt="" class="icon-external"/>
+          </a>
+          <a href="mailto:thetpine254@gmail.com" target="_blank" class="chip-socials w-inline-block">
+            <div class="text-socialnav">Email</div>
+            <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/63e0b50ea0956f4526968ef1_23-icon-external.svg" loading="lazy" alt="" class="icon-external"/>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Back Button (reveals on scroll-up) -->
+  <a href="index.html" class="back-btn floating-back-btn">
+    <span>←</span> Back to Projects
+  </a>
+
+  <div class="locomotive-scroll">
+    <!-- Back Button -->
+    <div class="back-button-container">
+      <a href="index.html" class="back-btn">
+        <span>←</span> Back to Projects
+      </a>
+    </div>
+
+    <!-- Title Section -->
+    <div class="section-hero-details" style="padding: 4px 24px 28px;">
+      <div class="container-general" style="max-width: 1120px; margin: 0 auto;">
+        <div class="overline-wrapper anim-up d1" style="margin-bottom: 6px;">
+          <div class="icon-section-dot"></div>
+          <div class="text-projectpage-overline">MOBILE FINTECH SYSTEM</div>
+        </div>
+        <h1 class="gloock-title anim-up d2" style="font-family: 'Gloock', serif; font-size: 3.5rem; color: #f8fafc; font-weight: 400; line-height: 0.95; margin-top: -6px; margin-bottom: -8px; letter-spacing: -0.02em;">LearnLoop</h1>
+        <p class="project-subtitle anim-up d3" style="font-size: 1.25rem; color: #94a3b8; max-width: 720px; line-height: 1.5; margin: 0;">
+          A beautifully gamified Android fintech application designed specifically to teach financial literacy, compound savings, and micro-investment fundamentals to Singaporean youth.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mockup Window Showcase -->
+    <div class="container-general" style="max-width: 1120px; margin: 0 auto; padding: 0 24px;">
+      <div class="container-hero-image anim-up d4" style="margin-top: 0; margin-bottom: 40px;">
+        <div class="glare-item-top outer-edge"></div>
+        <div class="window-outline">
+          <div class="glare-item-top hero-inner"></div>
+          <div class="window-main">
+            <div class="window-bar">
+              <div class="window-dots-wrapper">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+              </div>
+              <div class="window-title-address" style="font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #475569; letter-spacing: 0.05em;">github.com/Thet9354/LearnLoop</div>
+            </div>
+            <div class="window-content" style="background: #0d0d0f; overflow: hidden; display: block; padding: 10px;">
+              <img src="assets/LearnLoop.png" loading="lazy" alt="LearnLoop App Interface Showcase" style="width: 100%; height: auto; display: block; border-radius: 10px;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Detail Layout -->
+    <div class="project-detail-layout">
+      <!-- Sidebar Column -->
+      <div class="project-sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Status</div>
+          <div class="sidebar-value" style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #22c55e; box-shadow: 0 0 10px rgba(34,197,94,0.6);"></span>
+            Functional Beta
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Target Audience</div>
+          <div class="sidebar-value">Singaporean Youth (Ages 12-18)</div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Role</div>
+          <div class="sidebar-value">Co-Founder & Lead Android Developer</div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Timeline</div>
+          <div class="sidebar-value">Mid 2024</div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Tech Stack</div>
+          <div class="sidebar-chips">
+            <span class="sidebar-chip">Kotlin</span>
+            <span class="sidebar-chip">Java</span>
+            <span class="sidebar-chip">Jetpack Compose</span>
+            <span class="sidebar-chip">SQLite / Room</span>
+            <span class="sidebar-chip">Coroutines</span>
+            <span class="sidebar-chip">Retrofit</span>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">Links</div>
+          <div class="sidebar-value">
+            <a href="https://github.com/Thet9354/LearnLoop" target="_blank" class="sidebar-link">
+              GitHub Repository <span style="font-size: 10px;">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="content-writeup">
+        <h2>The Thesis & The Problem</h2>
+        <p>
+          Financial literacy is a critical life skill, yet traditional banking apps and educational curricula fail to engage young minds. Abstract concepts like compound interest, inflation, stock market volatility, and debt metrics are dry and hard for adolescents to conceptualize in a meaningful way.
+        </p>
+        <p>
+          LearnLoop was built to address this gap: a gamified, localized fintech portal. Built natively for Android using <strong>Kotlin and Jetpack Compose</strong>, LearnLoop guides users through interactive mini-quests, sandbox investing markets, and automated pocket money allocation vaults, converting dry theories into delightful, tactile loops.
+        </p>
+
+        <div class="highlight-box">
+          <p>
+            <strong>Localized Singapore Context:</strong> To maximize real-world applicability, LearnLoop utilizes realistic localized scenarios: budgeting for school lunches at typical hawker centers, parsing CPF (Central Provident Fund) contribution schemas, and calculating compound interest models matching Singapore's post-office savings bank (POSB) savings rates.
+          </p>
+        </div>
+
+        <h2>Design Thinking: Engaging & Energetic UX</h2>
+        <p>
+          Prototyping a financial app that captures youth attention:
+        </p>
+        <ul>
+          <li><strong>Gamified Quest Modules:</strong> Financial lessons are structured as interactive multi-stage quests. Users receive virtual coins upon completing mini-quizzes, which can be spent inside a built-in sandbox mock investment game.</li>
+          <li><strong>SQLite Transaction Ledgers:</strong> All transaction records, mock investment portfolios, and logged quest progress are cached locally on-device using Android's native <strong>SQLite/Room</strong> databases, allowing offline access during transit.</li>
+          <li><strong>Dynamic Compose UI:</strong> Leveraged Android Jetpack Compose's state-driven framework to build responsive, micro-animated sliders, colorful progression progress bars, and custom card overlays.</li>
+        </ul>
+
+        <h2>On-Device Database Model (SQLite Room Schema)</h2>
+        <p>
+          Below is a code model representing our database structure, mapping virtual transactions and user progress logs in SQLite:
+        </p>
+
+        <div class="architecture-box">
+package com.learnloop.data
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import androidx.room.ForeignKey
+
+@Entity(tableName = "users")
+data class YouthUser(
+    @PrimaryKey(autoGenerate = true) val userId: Long = 0,
+    val username: String,
+    val virtualBalanceCoins: Int = 100,
+    val currentQuestLevel: Int = 1
+)
+
+@Entity(
+    tableName = "virtual_transactions",
+    foreignKeys = [ForeignKey(
+        entity = YouthUser::class,
+        parentColumns = ["userId"],
+        childColumns = ["userRefId"],
+        onDelete = ForeignKey.CASCADE
+    )]
+)
+data class VirtualTransaction(
+    @PrimaryKey(autoGenerate = true) val transactionId: Long = 0,
+    val userRefId: Long,
+    val transactionType: String, -- 'quest_reward' | 'sandbox_buy' | 'sandbox_sell'
+    val amountCoins: Int,
+    val timestampMs: Long = System.currentTimeMillis()
+)
+        </div>
+
+        <h2>Technical Achievements</h2>
+        <ol>
+          <li><strong>Offline-First Synchronization:</strong> Leveraged Room and Flow architectures, ensuring that balance counts and investment values update concurrently across multiple fragments without blocking thread queues.</li>
+          <li><strong>Simulated Sandboxed Market:</strong> Developed a basic simulated currency market that updates mock stock assets using randomized walk mathematical algorithms, giving users a safe environment to experience market volatility.</li>
+          <li><strong>Dynamic Light/Dark Themes:</strong> Followed standard Material 3 dynamic styling guidelines, matching the device's system theme seamlessly to maximize user visual comfort.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div data-w-id="ee1e9c3e-a1c6-2190-15b3-1daea0409ed7" class="section-footer">
+      <div class="container-footer">
+        <div class="footer-top-wrapper">
+          <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/64196e9f623177d26bd812da_wch-logomark-vert-fill.svg" loading="lazy" alt="" class="logomark-footer"/>
+          <div class="footer-links-column-wrapper">
+            <div class="footer-links-column">
+              <div class="text-footer-links-overline">MAIN</div>
+              <div class="footer-links-wrapper">
+                <a href="index.html" class="footer-link w-inline-block"><div class="text-footer-link">Work</div></a>
+                <a href="hackathons.html" class="footer-link w-inline-block"><div class="text-footer-link">Hackathons</div></a>
+                <a href="info.html" class="footer-link w-inline-block"><div class="text-footer-link">Info</div></a>
+                <a href="credentials.html" class="footer-link w-inline-block"><div class="text-footer-link">Credentials</div></a>
+              </div>
+            </div>
+            <div class="footer-links-column">
+              <div class="text-footer-links-overline">CONTACT</div>
+              <div class="footer-links-wrapper">
+                <a href="https://github.com/Thet9354" target="_blank" class="footer-link w-inline-block">
+                  <div class="text-footer-link">GitHub</div>
+                  <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/63e0b50ea0956f4526968ef1_23-icon-external.svg" loading="lazy" alt="" class="icon-external"/>
+                </a>
+                <a href="mailto:thetpine254@gmail.com" target="_blank" class="footer-link w-inline-block">
+                  <div class="text-footer-link">Email</div>
+                  <img src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/63e0b50ea0956f4526968ef1_23-icon-external.svg" loading="lazy" alt="" class="icon-external"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-wrapper">
+          <div class="footer-bottom-left">
+            <div class="text-footer-copyright">© 2026 Phoon Thet Pine. All Rights Reserved.</div>
+            <div class="text-under-copyright">Made with love and Iced Coffee (Mascarpone Latte).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63dcb6e1a80e9454b630f4c4" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/js/webflow.schunk.4a394eb5af8156f2.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/js/webflow.schunk.b5dbf6d1a583d907.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/js/webflow.e61c0c5d.4012d7da89075589.js" type="text/javascript"></script>
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+  <script>
+    const locoScroll = new LocomotiveScroll({
+      el: document.querySelector(".locomotive-scroll"),
+      smooth: true,
+      multiplier: 1.0,
+    });
+    setTimeout(() => {
+      locoScroll.update();
+    }, 1500);
+
+    (function () {
+      var floatBtn = document.querySelector('.floating-back-btn');
+      var lastY = 0;
+      if (floatBtn) {
+        locoScroll.on('scroll', function (obj) {
+          var y = (obj && obj.scroll) ? obj.scroll.y : 0;
+          var goingUp = y < lastY - 2;
+          if (goingUp && y > 360) {
+            floatBtn.classList.add('visible');
+          } else if (y <= 360 || y > lastY + 2) {
+            floatBtn.classList.remove('visible');
+          }
+          lastY = y;
+        });
+      }
+    })();
+
+    (function () {
+      document.body.classList.add('loaded');
+      var revealEls = document.querySelectorAll('.content-writeup h2, .content-writeup h3, .content-writeup p, .content-writeup ul, .content-writeup .highlight-box, .content-writeup .architecture-box, .project-sidebar .sidebar-section');
+      revealEls.forEach(function (el) { el.classList.add('reveal'); });
+      var showAll = function () { revealEls.forEach(function (el) { el.classList.add('in-view'); }); };
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        showAll();
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+        revealEls.forEach(function (el) { io.observe(el); });
+        setTimeout(showAll, 2600);
+      }
+    })();
+  </script>
+
+  <!-- Instant, seamless navigation: prerender same-origin pages on intent -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      { "where": { "href_matches": "/*.html" }, "eagerness": "moderate" }
+    ]
+  }
+  </script>
+  <script>
+    (function () {
+      // Recalculate smooth-scroll metrics when a prerendered page is activated
+      if ('onprerenderingchange' in document) {
+        document.addEventListener('prerenderingchange', function () {
+          setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 60);
+        }, { once: true });
+      }
+      // Fallback for browsers without Speculation Rules: prefetch HTML on intent + idle
+      var supportsSR = HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules');
+      if (supportsSR) return;
+      var seen = {};
+      function pf(href) {
+        if (!href || seen[href]) return; seen[href] = 1;
+        var l = document.createElement('link'); l.rel = 'prefetch'; l.href = href; document.head.appendChild(l);
+      }
+      function onIntent(e) {
+        var t = e.target;
+        var a = (t && t.closest) ? t.closest('a[href$=".html"]') : null;
+        if (a && a.origin === location.origin && !a.target) pf(a.href);
+      }
+      document.addEventListener('mouseover', onIntent, { passive: true });
+      document.addEventListener('touchstart', onIntent, { passive: true });
+      var idle = window.requestIdleCallback || function (c) { return setTimeout(c, 1000); };
+      idle(function () { ['index.html','hackathons.html','info.html','credentials.html'].forEach(pf); });
+    })();
+  </script>
+</body>
+</html>
