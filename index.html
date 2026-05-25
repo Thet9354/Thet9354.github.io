@@ -638,6 +638,23 @@
       padding: 24px 16px 8px;
       box-sizing: border-box;
     }
+
+    /* Reveal each project card's gradient glow on hover
+       (covers newer cards that lack the Webflow hover interaction) */
+    .project-card-colour {
+      transition: opacity 0.45s ease;
+    }
+    .project-card-outline:hover .project-card-colour,
+    .project-card:hover .project-card-colour {
+      opacity: 1 !important;
+    }
+    /* Brand-tinted glows for the newer ventures */
+    .project-card-colour.dibs-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(251, 146, 60, 0.30), rgba(0, 0, 0, 0) 70%);
+    }
+    .project-card-colour.leadlooms-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.30), rgba(0, 0, 0, 0) 70%);
+    }
   </style>
 </head>
 
@@ -831,7 +848,7 @@
               </div>
             </div><img src="assets/Dibs.png" loading="lazy" sizes="100vw" alt="Dibs"
               class="project-thumbnail futureai-thumbnail" />
-            <div class="project-card-colour thn"></div>
+            <div class="project-card-colour thn dibs-glow"></div>
           </a>
         </div>
         <div class="project-card-outline">
@@ -854,7 +871,7 @@
               </div>
             </div><img src="assets/LeadLooms.png" loading="lazy" sizes="100vw" alt="LeadLooms"
               class="project-thumbnail futureai-thumbnail" />
-            <div class="project-card-colour thn"></div>
+            <div class="project-card-colour thn leadlooms-glow"></div>
           </a>
         </div>
         <div class="project-card-outline">
