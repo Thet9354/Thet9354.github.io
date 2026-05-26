@@ -51,7 +51,8 @@
       "Bash(python3 -)",
       "Bash(cd \"/Users/PhoonThetPine/Desktop/Programming/VSCode Projects/thetpine.dev\" && rm -f .claude/_apply.py && echo \"removed temp script\")",
       "Bash(python3 .claude/_nav.py)",
-      "Bash(rm -f .claude/_nav.py)"
+      "Bash(rm -f .claude/_nav.py)",
+      "Bash(python3 - __TRACKED_VAR__.html)"
     ]
   }
 }
