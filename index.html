@@ -479,6 +479,10 @@
   <style>
     .project-thumbnail {
       border-radius: 16px;
+      transition: transform 0.45s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .project-card:hover .project-thumbnail {
+      transform: translateY(-12px);
     }
   </style>
   <style>
@@ -654,6 +658,53 @@
     }
     .project-card-colour.leadlooms-glow {
       background-image: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.30), rgba(0, 0, 0, 0) 70%);
+    }
+
+    /* Shared promo thumbnail for the new iOS app cards */
+    .ios-promo-thumbnail {
+      margin-top: auto;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Brand-tinted glows for the upcoming iOS apps */
+    .project-card-colour.omnimind-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.30), rgba(0, 0, 0, 0) 70%);
+    }
+    .project-card-colour.auralink-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(34, 211, 238, 0.28), rgba(0, 0, 0, 0) 70%);
+    }
+    .project-card-colour.spatialnav-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(245, 158, 11, 0.28), rgba(0, 0, 0, 0) 70%);
+    }
+    .project-card-colour.edgesync-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(77, 159, 255, 0.30), rgba(0, 0, 0, 0) 70%);
+    }
+    .project-card-colour.ntusync-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.30), rgba(0, 0, 0, 0) 70%);
+    }
+    .project-card-colour.honeymoon-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(255, 45, 120, 0.28), rgba(0, 0, 0, 0) 70%);
+    }
+
+    /* "Coming Soon" badge (amber) for unreleased apps */
+    .badge-soon {
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.10);
+      border-color: rgba(251, 191, 36, 0.30);
+    }
+    .soon-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #fbbf24;
+      animation: soonPulse 2s infinite;
+    }
+    @keyframes soonPulse {
+      0% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.5); }
+      70% { box-shadow: 0 0 0 6px rgba(251, 191, 36, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(251, 191, 36, 0); }
     }
   </style>
 </head>
@@ -852,9 +903,8 @@
           </a>
         </div>
         <div class="project-card-outline">
-          <div data-w-id="cb198c5c-8f1f-0bfc-7f66-0461e3dc703b" class="glare-item-top outer-edge"></div><a
-            data-w-id="cb198c5c-8f1f-0bfc-7f66-0461e3dc703c" href="leadlooms.html" class="project-card w-inline-block">
-            <div data-w-id="cb198c5c-8f1f-0bfc-7f66-0461e3dc703d" class="glare-item-top inner-edge"></div>
+          <div class="glare-item-top outer-edge"></div><a href="leadlooms.html" class="project-card w-inline-block">
+            <div class="glare-item-top inner-edge"></div>
             <div class="projectcard-top">
               <div class="projectcard-title-row">
                 <div class="text-projectcard-title">LeadLooms</div><img
@@ -898,110 +948,135 @@
           </a>
         </div>
         <div class="project-card-outline">
-          <div class="glare-item-top outer-edge"></div><a
-            data-w-id="81bb28b3-0cac-8b9c-c382-04fd4917df75" href="hearall.html" class="project-card w-inline-block">
-            <div data-w-id="b0c475d0-ac61-3f6b-c975-29615a853f93" class="glare-item-top inner-edge"></div>
+          <div class="glare-item-top outer-edge"></div><a href="honeymoon.html" class="project-card w-inline-block">
+            <div class="glare-item-top inner-edge"></div>
             <div class="projectcard-top">
               <div class="projectcard-title-row">
-                <div class="text-projectcard-title">HearAll</div><img
+                <div class="text-projectcard-title">Honeymoon</div><img
                   src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
                   loading="lazy" alt="" class="icon-projectcard-arrow" />
               </div>
-              <div class="text-projectcard-description"><span class="text-projectcard-description-company">Android App,
-                  &#x27;23</span> — Accessibility app breaking communication barriers for hearing-impaired users using AI
-                sign language recognition. Presented at Create4Good hackathon at SUTD.</div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
+                  &#x27;26</span> — A Tinder-style swipe app for choosing your dream honeymoon destination, with fluid drag
+                gestures, SwiftUI animations, and a polished, playful interface.</div>
               <div class="project-badges">
-                <div class="badge">Hackathon</div>
+                <div class="badge badge-soon"><span class="soon-dot"></span>COMING SOON</div>
+                <div class="badge">SwiftUI</div>
+                <div class="badge">Firebase</div>
+              </div>
+            </div><img src="assets/honeymoon.png" loading="lazy" sizes="100vw" alt="Honeymoon"
+              class="project-thumbnail ios-promo-thumbnail" />
+            <div class="project-card-colour honeymoon-glow"></div>
+          </a>
+        </div>
+        <div class="project-card-outline">
+          <div class="glare-item-top outer-edge"></div><a href="ntusync.html" class="project-card w-inline-block">
+            <div class="glare-item-top inner-edge"></div>
+            <div class="projectcard-top">
+              <div class="projectcard-title-row">
+                <div class="text-projectcard-title">NTUSync</div><img
+                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
+                  loading="lazy" alt="" class="icon-projectcard-arrow" />
+              </div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
+                  &#x27;26</span> — Offline campus transit optimizer and academic scheduler for NTU Singapore. A* routing
+                over a hand-modelled campus graph, Live Activities, and a fully on-device timetable.</div>
+              <div class="project-badges">
+                <div class="badge badge-soon"><span class="soon-dot"></span>COMING SOON</div>
+                <div class="badge">SwiftData</div>
+                <div class="badge">Live Activities</div>
+              </div>
+            </div><img src="assets/ntusync.png" loading="lazy" sizes="100vw" alt="NTUSync"
+              class="project-thumbnail ios-promo-thumbnail" />
+            <div class="project-card-colour ntusync-glow"></div>
+          </a>
+        </div>
+        <div class="project-card-outline">
+          <div class="glare-item-top outer-edge"></div><a href="omnimind.html" class="project-card w-inline-block">
+            <div class="glare-item-top inner-edge"></div>
+            <div class="projectcard-top">
+              <div class="projectcard-title-row">
+                <div class="text-projectcard-title">OmniMind</div><img
+                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
+                  loading="lazy" alt="" class="icon-projectcard-arrow" />
+              </div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
+                  &#x27;26</span> — On-device meeting intelligence: live transcription, semantic search across everything
+                you&#x27;ve captured, and AI summaries — audio, transcripts, and vectors never leave the phone.</div>
+              <div class="project-badges">
+                <div class="badge badge-soon"><span class="soon-dot"></span>COMING SOON</div>
+                <div class="badge">SwiftUI</div>
+                <div class="badge">On-Device AI</div>
+              </div>
+            </div><img src="assets/omnimind.png" loading="lazy" sizes="100vw" alt="OmniMind"
+              class="project-thumbnail ios-promo-thumbnail" />
+            <div class="project-card-colour omnimind-glow"></div>
+          </a>
+        </div>
+        <div class="project-card-outline">
+          <div class="glare-item-top outer-edge"></div><a href="auralink.html" class="project-card w-inline-block">
+            <div class="glare-item-top inner-edge"></div>
+            <div class="projectcard-top">
+              <div class="projectcard-title-row">
+                <div class="text-projectcard-title">AuraLink AI</div><img
+                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
+                  loading="lazy" alt="" class="icon-projectcard-arrow" />
+              </div>
+              <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
+                  &#x27;26</span> — Fully offline, on-device multimodal accessibility engine — American Sign Language to
+                text and speech, live captions with haptic prosody, and environmental sound as directional cues.</div>
+              <div class="project-badges">
+                <div class="badge badge-soon"><span class="soon-dot"></span>COMING SOON</div>
                 <div class="badge">Accessibility</div>
-                <div class="badge">Android</div>
+                <div class="badge">On-Device</div>
               </div>
-            </div><img src="assets/HearAll.png?v=2" loading="lazy" sizes="100vw" alt="HearAll"
-              class="project-thumbnail hearall-thumbnail" />
-            <div class="project-card-colour stadiabt"></div>
+            </div><img src="assets/auralink.png" loading="lazy" sizes="100vw" alt="AuraLink AI"
+              class="project-thumbnail ios-promo-thumbnail" />
+            <div class="project-card-colour auralink-glow"></div>
           </a>
         </div>
         <div class="project-card-outline">
-          <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da7" class="glare-item-top outer-edge"></div><a
-            data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da8" href="churnpredictor.html" class="project-card w-inline-block">
-            <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da9" class="glare-item-top inner-edge"></div>
+          <div class="glare-item-top outer-edge"></div><a href="spatialnav.html" class="project-card w-inline-block">
+            <div class="glare-item-top inner-edge"></div>
             <div class="projectcard-top">
               <div class="projectcard-title-row">
-                <div class="text-projectcard-title">Neural Network Churn Rate Predictor</div><img
-                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
-                  loading="lazy" alt="" class="icon-projectcard-arrow" />
-              </div>
-              <div class="text-projectcard-description"><span class="text-projectcard-description-company">Python / ML,
-                  &#x27;26</span> — Deep learning model that predicts customer churn and surfaces retention risks early.
-                Built in Python with a custom neural network architecture.</div>
-              <div class="project-badges">
-                <div class="badge">Machine Learning</div>
-                <div class="badge">Python</div>
-                <div class="badge">Deep Learning</div>
-              </div>
-            </div><img src="assets/neuralchurn.png" loading="lazy" alt="Neural Network Churn Rate Predictor"
-              class="project-thumbnail naft-thumbnail" />
-            <div class="project-card-colour thn"></div>
-          </a>
-        </div>
-        <div class="project-card-outline">
-          <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d98" class="glare-item-top outer-edge"></div><a
-            data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d99" href="runclub.html" class="project-card w-inline-block">
-            <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416d9a" class="glare-item-top inner-edge"></div>
-            <div class="projectcard-top">
-              <div class="projectcard-title-row">
-                <div class="text-projectcard-title">RunClub</div><img
+                <div class="text-projectcard-title">SpatialNav</div><img
                   src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
                   loading="lazy" alt="" class="icon-projectcard-arrow" />
               </div>
               <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
-                  &#x27;25</span> — Smart run tracking app with HealthKit sync built in SwiftUI.</div>
+                  &#x27;26</span> — Indoor spatial-awareness assistant for blind and low-vision users. LiDAR, on-device ML,
+                spatial audio, and a haptic vocabulary combine into a genuine sixth sense indoors.</div>
               <div class="project-badges">
-                <div class="badge">SwiftUI</div>
-                <div class="badge">iOS</div>
-                <div class="badge">HealthKit</div>
+                <div class="badge badge-soon"><span class="soon-dot"></span>COMING SOON</div>
+                <div class="badge">ARKit</div>
+                <div class="badge">Accessibility</div>
               </div>
-            </div><img src="assets/RunClub.png" loading="lazy" alt="RunClub" class="project-thumbnail runclub-thumbnail" />
-            <div class="project-card-colour spotlight"></div>
+            </div><img src="assets/spatialnav.png" loading="lazy" sizes="100vw" alt="SpatialNav"
+              class="project-thumbnail ios-promo-thumbnail" />
+            <div class="project-card-colour spatialnav-glow"></div>
           </a>
         </div>
         <div class="project-card-outline">
-          <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da7" class="glare-item-top outer-edge"></div><a
-            data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da8" href="athletiq.html" class="project-card w-inline-block">
-            <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da9" class="glare-item-top inner-edge"></div>
+          <div class="glare-item-top outer-edge"></div><a href="edgesync.html" class="project-card w-inline-block">
+            <div class="glare-item-top inner-edge"></div>
             <div class="projectcard-top">
               <div class="projectcard-title-row">
-                <div class="text-projectcard-title">AthletIQ</div><img
+                <div class="text-projectcard-title">EdgeSync</div><img
                   src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
                   loading="lazy" alt="" class="icon-projectcard-arrow" />
               </div>
               <div class="text-projectcard-description"><span class="text-projectcard-description-company">iOS App,
-                  &#x27;25</span> — All-in-one Swift-powered fitness companion.</div>
+                  &#x27;26</span> — Serverless, offline-first, peer-to-peer collaborative workspace with real-time spatial
+                mapping. Nearby devices form an encrypted mesh and co-edit a shared map that merges after any partition.</div>
               <div class="project-badges">
-                <div class="badge">SwiftUI</div>
-                <div class="badge">iOS</div>
+                <div class="badge badge-soon"><span class="soon-dot"></span>COMING SOON</div>
+                <div class="badge">Multipeer</div>
+                <div class="badge">Offline-First</div>
               </div>
-            </div><img src="assets/AthletlQ.png" loading="lazy" alt="AthletIQ" class="project-thumbnail athletiq-thumbnail" />
-            <div class="project-card-colour spotlight"></div>
-          </a>
-        </div>
-        <div class="project-card-outline">
-          <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da7" class="glare-item-top outer-edge"></div><a
-            data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da8" href="learnloop.html" class="project-card w-inline-block">
-            <div data-w-id="799aa54d-e1f4-ce89-fcc5-18fd48416da9" class="glare-item-top inner-edge"></div>
-            <div class="projectcard-top">
-              <div class="projectcard-title-row">
-                <div class="text-projectcard-title">LearnLoop</div><img
-                  src="https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/641284285486aaab07feafaa_icon-arrow-project.svg"
-                  loading="lazy" alt="" class="icon-projectcard-arrow" />
-              </div>
-              <div class="text-projectcard-description"><span class="text-projectcard-description-company">Android
-                  App</span> — Fintech app building smarter money habits for Singaporean youth.</div>
-              <div class="project-badges">
-                <div class="badge">Android</div>
-                <div class="badge">Fintech</div>
-              </div>
-            </div><img src="assets/LearnLoop.png" loading="lazy" alt="LearnLoop" class="project-thumbnail learnloop-thumbnail" />
-            <div class="project-card-colour rbc"></div>
+            </div><img src="assets/edgesync.png" loading="lazy" sizes="100vw" alt="EdgeSync"
+              class="project-thumbnail ios-promo-thumbnail" />
+            <div class="project-card-colour edgesync-glow"></div>
           </a>
         </div>
       </div>
